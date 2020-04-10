@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_shape_start">#5D8DF6</color>
+    <color name="color_shape_end">#60B7F8</color>
+    <color name="color_shape_right">#5CBAF7</color>
+    <color name="colorText">#66000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="darker_gray">#aaa</color>
+    <color name="colorTheme">#68B9F8</color>
+    <color name="oriange">#ff9a00</color>
+    <color name="aurora_msg_receive_bubble_default_color">#2b78fa</color>
+    <color name="button_delect">#E96B5C</color>
+</resources>

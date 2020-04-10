@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/title_bar"/>
+
+    <com.flyco.tablayout.SegmentTabLayout
+        android:id="@+id/add_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:tl_bar_color="#ffffff"
+        app:tl_tab_width="80dp"
+        app:tl_indicator_color="@color/colorTheme"
+        app:tl_indicator_corner_radius="5dp">
+    </com.flyco.tablayout.SegmentTabLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#66000000"/>
+
+        <EditText
+            android:id="@+id/add_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/icon_search"
+            android:background="@color/white"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:hint="搜联系人"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#66000000"/>
+
+    <Button
+        android:id="@+id/add_commit"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_button_lines2"
+        android:textColor="@color/white"
+        android:text="搜索"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="5dp"
+        android:textSize="12sp"
+        android:text="搜索历史"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#66000000"/>
+
+    <ListView
+        android:id="@+id/add_lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/add_del"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="12sp"
+        android:text="清空搜索记录"/>
+</LinearLayout>
