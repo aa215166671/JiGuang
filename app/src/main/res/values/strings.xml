@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">ceshi_jiguang</string>
+    <string name="input_hint">发送消息</string>
     <string name="about">
         参照手机QQ7.1.5版本界面部分原型开发
         \n仅用作技术交流
@@ -7,4 +8,9 @@
         \n项目源码地址：
         \n https://github.com/wapchief/Android-IM
     </string>
+    <string name="rationale_record_voice">此应用程序需要访问麦克风才能录制语音。</string>
+    <string name="rationale_camera">此应用程序需要访问相片权限才能发送相片。</string>
+    <string name="message_click_hint">留言点击事件</string>
+
+    <string name="viewpager_indicator">%1$d/%2$d</string>
 </resources>

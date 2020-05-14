@@ -2,6 +2,7 @@ package com.example.a21516.ceshi_jiguang.famework.network;
 
 import android.util.Log;
 
+import com.example.a21516.ceshi_jiguang.entity.ImgBean;
 import com.example.a21516.ceshi_jiguang.entity.UserStateBean;
 import com.example.a21516.ceshi_jiguang.entity.UserStateListBean;
 import com.example.a21516.ceshi_jiguang.famework.helper.SharedPrefHelper;
@@ -106,5 +107,18 @@ public class NetWorkManager {
                 username);
         call.enqueue(callback);
 
+    }
+    //获取图片路径
+    public static void getImgUrl(String mediaId,Callback<ImgBean> callback){
+        headers();
+        OkHttpClient client=httpClient.build();
+        Retrofit retrofit = new Retrofit.Builder()
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(Url.JPUSH_ROOT)
+                .client(client)
+                .build();
+        Api api = retrofit.create(Api.class);
+        Call<ImgBean> call = api.getImg(mediaId);
+        call.enqueue(callback);
     }
 }

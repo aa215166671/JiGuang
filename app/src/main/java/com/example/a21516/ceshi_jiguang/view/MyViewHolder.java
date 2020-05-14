@@ -72,7 +72,7 @@ public class MyViewHolder<MESSAGE extends IMessage> extends BaseMessageViewHolde
                     @Override
                     public boolean onLongClick(View v) {
                         if (MyViewHolder.this.mMsgLongClickListener != null){
-                            MyViewHolder.this.mMsgLongClickListener.onMessageLongClick(message);
+                            MyViewHolder.this.mMsgLongClickListener.onMessageLongClick(itemView,message);
                         }
                         return true;
                     }

@@ -1,5 +1,6 @@
 package com.example.a21516.ceshi_jiguang.famework.network;
 
+import com.example.a21516.ceshi_jiguang.entity.ImgBean;
 import com.example.a21516.ceshi_jiguang.entity.UserStateBean;
 import com.example.a21516.ceshi_jiguang.entity.UserStateListBean;
 
@@ -27,4 +28,9 @@ public interface Api {
     //获取用户资料
     @GET("/v1/users/{username}")
     Call<ResponseBody> userInfo(@Path("username") String username);
+
+    //下载图片
+    @GET ("/v1/resource")
+    Call<ImgBean> getImg(@Query("mediaId") String mediaId);
+
 }

@@ -121,12 +121,14 @@ public class SettingActivity extends BaseActivity {
         mSettingPushVib.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
                 if (b){
                     if (helper.getMusic()){
                         JMessageClient.setNotificationFlag(FLAG_NOTIFY_SILENCE | FLAG_NOTIFY_WITH_SOUND | FLAG_NOTIFY_WITH_VIBRATE);
                     }else {
                         JMessageClient.setNotificationFlag(FLAG_NOTIFY_SILENCE | FLAG_NOTIFY_WITH_VIBRATE);
                     }
+
                 }else {
                     if (helper.getMusic()){
                         JMessageClient.setNotificationFlag(FLAG_NOTIFY_SILENCE | FLAG_NOTIFY_WITH_SOUND);
@@ -134,9 +136,11 @@ public class SettingActivity extends BaseActivity {
                         JMessageClient.setNotificationFlag(FLAG_NOTIFY_SILENCE);
                     }
                 }
+
                 helper.setVib(b);
             }
         });
+
     }
 
     //提示音
@@ -182,9 +186,11 @@ public class SettingActivity extends BaseActivity {
 
     @Override
     protected void onResume() {
+
         super.onResume();
         mSettingPushVib.setChecked(helper.getVib());
         mSettingPushMusic.setChecked(helper.getMusic());
+
     }
 
     @Override
@@ -195,7 +201,9 @@ public class SettingActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         ButterKnife.bind(this);
+
     }
     @OnClick({R.id.title_bar_back,R.id.setting_exit,R.id.setting_password})
     public void onViewClicked(View view){

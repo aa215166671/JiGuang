@@ -14,4 +14,6 @@
     <color name="oriange">#ff9a00</color>
     <color name="aurora_msg_receive_bubble_default_color">#2b78fa</color>
     <color name="button_delect">#E96B5C</color>
+    <color name="gray_theme">#e5e5ea</color>
+    <color name="black_text">#333333</color>
 </resources>

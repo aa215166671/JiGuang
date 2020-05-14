@@ -98,7 +98,6 @@ public class UserInfoActivity extends BaseActivity{
         //获取用户资料
         initUserInfo(getUserName);
 
-
         JAnalyticsInterface.onPageStart(this,this.getClass().getCanonicalName());
     }
 
@@ -135,6 +134,7 @@ public class UserInfoActivity extends BaseActivity{
     }
 
     private void initBar() {
+
         helper=SharedPrefHelper.getInstance();
         //设置背景
         mTitleBarLeft.setBackground(getResources().getDrawable(R.drawable.shape_titlebar));
@@ -147,6 +147,7 @@ public class UserInfoActivity extends BaseActivity{
         mTitleOptionsTv.setVisibility(View.VISIBLE);
         mBottomBarLeft.setVisibility(View.GONE);
         username = getIntent().getStringExtra("USERNAME");
+
     }
 
     @Override
@@ -183,7 +184,6 @@ public class UserInfoActivity extends BaseActivity{
                 //假设没有聊过天就 创建会话
                 if (conv == null){
                     Conversation.createSingleConversation(getIntent().getStringExtra("USERNAME"),SharedPrefHelper.getInstance().getAppKey());
-
                 }
                 Intent intent=new Intent(UserInfoActivity.this,ChatMsgActivity.class);
                 intent.putExtra("USERNAME",getIntent().getStringExtra("USERNAME"));

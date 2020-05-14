@@ -19,4 +19,7 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
     </style>
+
+    <style name="ActionDialogStyle" parent="@android:style/Theme.Dialog"></style>
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog"></style>
 </resources>

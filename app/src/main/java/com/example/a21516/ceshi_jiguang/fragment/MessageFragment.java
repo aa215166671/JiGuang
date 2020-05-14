@@ -233,8 +233,12 @@ public class MessageFragment extends Fragment {
                     //进行撤回消息判断
                     if (list.get(i).getLatestMessage().getContent().getContentType() == ContentType.prompt){
                         bean.setContent(((PromptContent)list.get(i).getLatestMessage().getContent()).getPromptText());
-                    }else{
+                    }else if (list.get(i).getLatestMessage().getContent().getContentType() == ContentType.text){
                         bean.setContent(((TextContent)(list.get(i).getLatestMessage()).getContent()).getText());
+                    }else if (list.get(i).getLatestMessage().getContent().getContentType() == ContentType.image){
+                        bean.setContent("[图片]");
+                    }else if (list.get(i).getLatestMessage().getContent().getContentType() == ContentType.voice){
+                        bean.setContent("[语音]");
                     }
                 }catch (Exception e){
                     bean.setContent("最近没有消息");
